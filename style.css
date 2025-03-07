@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto_Condensed-Regular.ttf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #C4C4C4;
+    font-family: 'Roboto';
+    color: #000;
+}
+.container {
+    width: 400px;
+    margin: 50px auto;
+}
+#search {
+    width: 100%;
+    padding: 9px;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    font-family: 'Roboto';
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+#repo-list {
+    margin-top: 45px;
+}
+#autocomplete-list, #repo-list {
+    list-style: none;
+    padding: 0;
+}
+#autocomplete-list li {
+    background: #E3E3E3;
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    width: 100%;
+    font-size: 15px;
+}
+#autocomplete-list li:hover {
+   background-color: #65CDF9;
+}
+.repo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d48fd4;
+    padding: 10px;
+    font-size: 24px;
+    width: 100%; 
+    border: 1px solid #000000;
+}
+.remove-btn {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.remove-btn::before,
+.remove-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -40%;
+    width: 40px;
+    height: 2px;
+    background-color: red;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.remove-btn::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
